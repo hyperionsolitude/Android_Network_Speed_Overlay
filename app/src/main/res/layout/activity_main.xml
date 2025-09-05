@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_text_primary"
+            android:layout_marginTop="32dp" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This app displays real-time network speed on your status bar, positioned to the left of WiFi or mobile network icons."
+            android:textAlignment="center"
+            android:textColor="@color/dark_text_secondary"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnStartOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_overlay"
+            android:layout_marginTop="32dp" />
+
+        <Button
+            android:id="@+id/btnStopOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stop_overlay"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnGrantAccessibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/grant_permission"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnResetPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset Position"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Instructions:\n1. Grant system overlay permission\n2. Enable accessibility service\n3. Start the overlay\n4. Drag to reposition anywhere on screen\n5. Use Reset Position to restore defaults"
+            android:textAlignment="center"
+            android:textColor="@color/dark_text_secondary"
+            android:layout_marginTop="32dp" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Network Speed Overlay</string>
+    <string name="accessibility_service_description">Network Speed Overlay accessibility service for positioning the speed indicator on the status bar</string>
+    <string name="start_overlay">Start Network Speed Overlay</string>
+    <string name="stop_overlay">Stop Network Speed Overlay</string>
+    <string name="overlay_permission_required">System overlay permission is required to display network speed on the status bar</string>
+    <string name="accessibility_permission_required">Accessibility service permission is required for proper positioning</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="network_speed_format">%s/s</string>
+    <string name="downloading">↓</string>
+    <string name="uploading">↑</string>
+    <string name="no_network">No Network</string>
+    <string name="wifi_connected">WiFi Connected</string>
+    <string name="mobile_connected">Mobile Data Connected</string>
+    <string name="ethernet_connected">Ethernet Connected</string>
+</resources>

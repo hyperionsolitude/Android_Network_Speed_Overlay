@@ -1,0 +1,97 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.networkspeed.overlay'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.networkspeed.overlay"
+        minSdk 24
+        targetSdk 34
+        versionCode 3
+        versionName "1.2"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        // Advanced performance optimizations
+        multiDexEnabled false
+        
+        // Optimize for size and performance
+        resConfigs "en", "xxhdpi"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable true
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        // Enable incremental compilation
+        incremental true
+    }
+    
+    kotlinOptions {
+        jvmTarget = '1.8'
+        // Enable advanced optimizations
+        freeCompilerArgs += [
+            '-Xjvm-default=all',
+            '-opt-in=kotlin.RequiresOptIn'
+        ]
+    }
+    
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+    
+    // Optimize APK size
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE', 'META-INF/LICENSE.txt', 'META-INF/license.txt', 'META-INF/NOTICE', 'META-INF/NOTICE.txt', 'META-INF/notice.txt', 'META-INF/ASL2.0', 'META-INF/*.kotlin_module', 'kotlin/**', 'kotlinx/**', 'META-INF/*.version', 'META-INF/*.pro']
+        }
+    }
+    
+    // Split APKs by architecture to reduce size
+    splits {
+        abi {
+            enable true
+            reset()
+            include "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
+            universalApk false
+        }
+    }
+}
+
+dependencies {
+    // Core Android libraries (minimal set)
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    
+    // Remove unused dependencies to reduce size
+    // implementation 'com.google.android.material:material:1.10.0' // Not used in our app
+    // implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // Not used in our app
+    // implementation 'androidx.lifecycle:lifecycle-service:2.7.0' // Not used in our app
+    // implementation 'androidx.work:work-runtime-ktx:2.9.0' // Not used in our app
+    
+    // Test dependencies (only for debug builds)
+    debugImplementation 'junit:junit:4.13.2'
+    debugImplementation 'androidx.test.ext:junit:1.1.5'
+    debugImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

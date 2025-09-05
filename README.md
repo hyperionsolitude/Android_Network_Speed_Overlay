@@ -16,7 +16,7 @@ A lightweight, high-performance Android app that displays real-time network spee
 - 💾 **Position Memory** - Remembers your preferred position
 - 🔋 **Battery Optimized** - Minimal background processing
 - 📊 **Performance Metrics** - Built-in performance monitoring
-- 🎨 **Customizable** - Compact design with color-coded network types
+- 🎨 **Customizable** - Compact design with color-coded network indicators
 
 ## 🚀 Performance
 
@@ -30,11 +30,7 @@ A lightweight, high-performance Android app that displays real-time network spee
 
 ## 📱 Screenshots
 
-<div align="center">
-  <img src="screenshots/main_activity.png" alt="Main Activity" width="200"/>
-  <img src="screenshots/overlay_dark.png" alt="Dark Overlay" width="200"/>
-  <img src="screenshots/overlay_light.png" alt="Light Overlay" width="200"/>
-</div>
+*Screenshots will be added soon. The app features a modern dark theme with color-coded network indicators.*
 
 ## 🛠️ Installation
 
@@ -123,11 +119,11 @@ Network_Speed_Overlay/
 
 ### Colors
 The app uses a modern dark theme with the following color scheme:
-- **Background**: Deep dark gray (#121212)
-- **Text**: High contrast white
-- **Download**: Green (#4CAF50)
-- **Upload**: Blue (#2196F3)
-- **No Network**: Red (#FF5722)
+- **Background**: Semi-transparent dark (#E0000000)
+- **Text**: High contrast white (#FFFFFFFF)
+- **WiFi/Ethernet**: Green (#4CAF50) - indicates stable connection
+- **Mobile/Cellular**: Blue (#2196F3) - indicates mobile data
+- **No Network**: Red (#FF5722) - indicates connection issues
 
 ### Update Frequency
 The app uses intelligent updates that only refresh when:
@@ -152,7 +148,7 @@ The app uses intelligent updates that only refresh when:
 ### Network Monitoring
 - **TrafficStats API**: Uses Android's built-in network statistics
 - **Real-time Calculation**: Calculates speed from byte differences
-- **Network Type Detection**: Identifies WiFi, Mobile, Ethernet
+- **Network Type Detection**: Identifies WiFi (green), Mobile (blue), Ethernet (green)
 - **Error Handling**: Robust error recovery and validation
 
 ## 🤝 Contributing

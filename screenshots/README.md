@@ -13,9 +13,10 @@ This directory contains screenshots of the Network Speed Overlay app.
 - `overlay_dragging.png` - Overlay being dragged to new position
 
 ### Different Network Types
-- `overlay_wifi.png` - Overlay showing WiFi network speed
-- `overlay_mobile.png` - Overlay showing mobile network speed
-- `overlay_ethernet.png` - Overlay showing ethernet network speed
+- `overlay_wifi.png` - Overlay showing WiFi network speed (green indicator)
+- `overlay_mobile.png` - Overlay showing mobile network speed (blue indicator)
+- `overlay_ethernet.png` - Overlay showing ethernet network speed (green indicator)
+- `overlay_no_network.png` - Overlay showing no network (red indicator)
 
 ### Settings and Permissions
 - `permissions_screen.png` - System overlay permission request

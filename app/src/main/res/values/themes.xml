@@ -14,6 +14,6 @@
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
         <!-- Navigation bar color -->
         <item name="android:navigationBarColor" tools:targetApi="l">@color/dark_background</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="o">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
     </style>
 </resources>

@@ -99,7 +99,11 @@ class MainActivity : AppCompatActivity() {
     
     private fun startNetworkSpeedOverlay() {
         val intent = Intent(this, NetworkSpeedOverlayService::class.java)
-        startForegroundService(intent)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent)
+        } else {
+            startService(intent)
+        }
         Toast.makeText(this, "Network Speed Overlay started - Drag to reposition, use app to stop", Toast.LENGTH_LONG).show()
     }
     
